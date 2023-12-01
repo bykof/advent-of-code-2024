@@ -23,9 +23,16 @@ def calibration_value(line: str) -> int:
     return int(f"{first_digit}{last_digit}")
 
 
+def calibration_values_sum(lines: typing.List[str]) -> int:
+    return sum([calibration_value(line) for line in lines])
+
+
 def main():
-    lines = read_input_lines("./input")
-    print("Sum is: ", sum([calibration_value(line) for line in lines]))
+    lines = read_input_lines("./part_one_input")
+    print(
+        "Sum is: ",
+        calibration_values_sum(lines),
+    )
 
 
 main()
