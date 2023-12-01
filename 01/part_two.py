@@ -33,13 +33,11 @@ def find_first_digit(line: str, is_reversed=False) -> int:
 
             if line[i:].startswith(starts_with_digit):
                 return DIGITS[digit]
-    return -1
+
+    raise Exception("Could not find a number")
 
 
 def calibration_value(line: str) -> int:
-    first_digit = None
-    last_digit = None
-
     first_digit = find_first_digit(line)
     last_digit = find_first_digit(line, is_reversed=True)
     return int(f"{first_digit}{last_digit}")
