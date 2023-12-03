@@ -1,4 +1,3 @@
-import re
 import typing
 
 Schematic = typing.List[typing.List[str]]
